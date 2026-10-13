@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RSA Secure Messaging</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">🔐 RSA Secure Messaging</div>
+    </nav>
+
+
+    <!-- Hero -->
+    <header class="hero">
+
+        <h1>RSA Secure Messaging</h1>
+
+        <p>RSA Encryption & Decryption System</p>
+
+        <span>
+            Generate Keys • Encrypt • Decrypt • Understand
+        </span>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- ============================= -->
+        <!-- KEY GENERATION -->
+        <!-- ============================= -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>🔑 RSA Key Generation</h2>
+
+                <p>
+                    Enter two prime numbers to generate the RSA public
+                    and private keys.
+                </p>
+
+            </div>
+
+
+            <div class="input-row">
+
+                <div class="form-group">
+
+                    <label for="primeP">
+                        Prime Number (p)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="primeP"
+                        placeholder="Example: 5"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="primeQ">
+                        Prime Number (q)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="primeQ"
+                        placeholder="Example: 11"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="generateBtn"
+                class="primary-btn"
+            >
+                🔑 Generate RSA Keys
+            </button>
+
+
+            <div
+                id="keyError"
+                class="message"
+            ></div>
+
+
+            <!-- Generated Keys -->
+
+            <div class="key-display">
+
+                <div class="key-box">
+
+                    <h3>🔓 Public Key</h3>
+
+                    <p id="publicKey">
+                        Not generated yet
+                    </p>
+
+                </div>
+
+
+                <div class="key-box">
+
+                    <h3>🔐 Private Key</h3>
+
+                    <p id="privateKey">
+                        Not generated yet
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- MESSAGE -->
+        <!-- ============================= -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>📝 Message</h2>
+
+                <p>
+                    Enter text to encrypt or enter ciphertext to decrypt.
+                </p>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Plaintext / Ciphertext
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Enter your message here..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="button-group">
+
+                <button
+                    type="button"
+                    id="encryptBtn"
+                    class="primary-btn"
+                >
+                    🔒 Encrypt
+                </button>
+
+
+                <button
+                    type="button"
+                    id="decryptBtn"
+                    class="secondary-btn"
+                >
+                    🔓 Decrypt
+                </button>
+
+            </div>
+
+
+            <div
+                id="messageError"
+                class="message"
+            ></div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- RESULT -->
+        <!-- ============================= -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>📋 Result</h2>
+
+                <p>
+                    The encrypted or decrypted message will appear here.
+                </p>
+
+            </div>
+
+
+            <div
+                id="result"
+                class="result-box"
+            >
+                Your result will appear here...
+            </div>
+
+
+            <button
+                type="button"
+                id="copyBtn"
+                class="copy-btn"
+            >
+                📋 Copy Result
+            </button>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- CALCULATION -->
+        <!-- ============================= -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>🧮 Step-by-Step Calculation</h2>
+
+                <p>
+                    Detailed RSA mathematical calculations.
+                </p>
+
+            </div>
+
+
+            <div
+                id="calculation"
+                class="calculation-box"
+            >
+                RSA calculation details will appear here
+                after an operation.
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- OPERATION LOG -->
+        <!-- ============================= -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>📜 Operation Log</h2>
+
+                <p>
+                    History of RSA operations performed during this session.
+                </p>
+
+            </div>
+
+
+            <div
+                id="operationLog"
+                class="log-box"
+            >
+                <p>No operations performed yet.</p>
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- RSA INFORMATION -->
+        <!-- ============================= -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>📚 About RSA</h2>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <p>
+                    <strong>RSA</strong> is a public-key cryptographic
+                    algorithm that uses a pair of keys for secure
+                    communication.
+                </p>
+
+
+                <p>
+                    The <strong>public key</strong> can be shared with
+                    others and is used for encryption.
+                </p>
+
+
+                <p>
+                    The <strong>private key</strong> is kept secret and
+                    is used for decryption.
+                </p>
+
+
+                <p>
+                    RSA security is based on the computational difficulty
+                    of factoring large integers.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>🔐 RSA Secure Messaging</p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

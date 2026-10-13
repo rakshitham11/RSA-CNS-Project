@@ -1,0 +1,585 @@
+/* =====================================
+   RSA Secure Messaging
+   Main Styles
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #07111f;
+
+    color: #e8eef7;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+
+    background: #0b1b2e;
+
+    border-bottom: 1px solid #1d3550;
+
+    padding: 18px 40px;
+}
+
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #ffffff;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+
+    text-align: center;
+
+    padding: 55px 20px 35px;
+}
+
+
+.hero h1 {
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+    color: #ffffff;
+}
+
+
+.hero p {
+
+    font-size: 20px;
+
+    color: #b9c9dc;
+
+    margin-bottom: 8px;
+}
+
+
+.hero span {
+
+    color: #7fa8d8;
+
+    font-size: 15px;
+}
+
+
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1050px;
+
+    margin: 0 auto 50px;
+}
+
+
+/* =====================================
+   CARDS
+===================================== */
+
+.card {
+
+    background: #0b1b2e;
+
+    border: 1px solid #1d3550;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================
+   SECTION HEADINGS
+===================================== */
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.section-heading h2 {
+
+    font-size: 25px;
+
+    color: #ffffff;
+
+    margin-bottom: 6px;
+}
+
+
+.section-heading p {
+
+    color: #9fb2c8;
+
+    font-size: 15px;
+}
+
+
+/* =====================================
+   INPUT ROW
+===================================== */
+
+.input-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* =====================================
+   FORM
+===================================== */
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #dce7f3;
+}
+
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #2b4968;
+
+    border-radius: 8px;
+
+    background: #07111f;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+input:focus,
+textarea:focus {
+
+    border-color: #5f9bd5;
+}
+
+
+textarea {
+
+    resize: vertical;
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+button {
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 12px 22px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.primary-btn {
+
+    background: #2869a6;
+
+    color: white;
+}
+
+
+.primary-btn:hover {
+
+    background: #347dbd;
+}
+
+
+.secondary-btn {
+
+    background: #263b52;
+
+    color: white;
+}
+
+
+.secondary-btn:hover {
+
+    background: #334e69;
+}
+
+
+/* Generate Button */
+
+#generateBtn {
+
+    display: block;
+
+    margin: 5px auto 25px;
+}
+
+
+/* =====================================
+   KEY DISPLAY
+===================================== */
+
+.key-display {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.key-box {
+
+    background: #07111f;
+
+    border: 1px solid #263f59;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+
+.key-box h3 {
+
+    margin-bottom: 8px;
+
+    color: #b9d6f2;
+}
+
+
+.key-box p {
+
+    color: #ffffff;
+
+    font-family: monospace;
+
+    font-size: 16px;
+
+    word-break: break-word;
+}
+
+
+/* =====================================
+   MESSAGE BUTTONS
+===================================== */
+
+.button-group {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================
+   RESULT
+===================================== */
+
+.result-box {
+
+    min-height: 80px;
+
+    background: #07111f;
+
+    border: 1px solid #263f59;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    color: #ffffff;
+
+    word-break: break-word;
+
+    font-family: monospace;
+
+    font-size: 16px;
+
+    margin-bottom: 15px;
+}
+
+
+.copy-btn {
+
+    display: block;
+
+    margin: 0 auto;
+
+    background: #263b52;
+
+    color: white;
+}
+
+
+.copy-btn:hover {
+
+    background: #334e69;
+}
+
+
+/* =====================================
+   CALCULATION
+===================================== */
+
+.calculation-box {
+
+    background: #07111f;
+
+    border: 1px solid #263f59;
+
+    border-radius: 10px;
+
+    padding: 22px;
+
+    min-height: 180px;
+
+    color: #d7e4f1;
+
+    white-space: pre-wrap;
+
+    overflow-x: auto;
+
+    font-family: monospace;
+
+    font-size: 14px;
+}
+
+
+/* =====================================
+   OPERATION LOG
+===================================== */
+
+.log-box {
+
+    background: #07111f;
+
+    border: 1px solid #263f59;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    min-height: 80px;
+
+    font-family: monospace;
+
+    color: #cbd9e7;
+}
+
+
+.log-entry {
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #1d3550;
+}
+
+
+.log-entry:last-child {
+
+    border-bottom: none;
+}
+
+
+.log-time {
+
+    color: #7fa8d8;
+
+    font-size: 13px;
+}
+
+
+.log-action {
+
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   INFORMATION
+===================================== */
+
+.info-box {
+
+    background: #07111f;
+
+    border-left: 4px solid #2869a6;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    color: #c4d3e2;
+}
+
+
+.info-box p {
+
+    margin-bottom: 10px;
+}
+
+
+.info-box p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================
+   ERROR / SUCCESS MESSAGE
+===================================== */
+
+.message {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    min-height: 24px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    text-align: center;
+
+    background: #0b1b2e;
+
+    border-top: 1px solid #1d3550;
+
+    padding: 20px;
+
+    color: #8ea4bb;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+
+    .hero h1 {
+
+        font-size: 34px;
+    }
+
+
+    .input-row,
+    .key-display {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .card {
+
+        padding: 22px;
+    }
+
+
+    .button-group {
+
+        flex-direction: column;
+    }
+
+
+    .button-group button {
+
+        width: 100%;
+    }
+
+
+    .navbar {
+
+        padding: 16px 20px;
+    }
+
+
+    .logo {
+
+        font-size: 19px;
+    }
+
+}
